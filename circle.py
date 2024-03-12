@@ -3,7 +3,6 @@ import math
 
 
 class Circle:
-
     def __init__(self, radius):
         """Initialize a circle with given radius.
         

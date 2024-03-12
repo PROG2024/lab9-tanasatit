@@ -41,4 +41,5 @@ class CircleTest(unittest.TestCase):
 
     def test_negative_radius(self):
         with self.assertRaises(ValueError):
-            Circle(-1)
+            Circle(-2)
+
