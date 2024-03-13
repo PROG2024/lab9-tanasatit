@@ -12,15 +12,13 @@ import logging
 
 
 class Counter:
-    _instances = {}
-
-    def __init__(self):
-        self.__count = 0
+    __instances = {}
+    __count = 0
 
     def __new__(cls, *args, **kwargs):
-        if not cls._instances:
-            cls._instances = super().__new__(cls, *args, **kwargs)
-        return cls._instances
+        if not cls.__instances:
+            cls.__instances = super().__new__(cls, *args, **kwargs)
+        return cls.__instances
 
     def __str__(self):
         return f"{self.__count}"

@@ -30,4 +30,7 @@ class CounterTest(unittest.TestCase):
         self.assertEqual(c2.count, c3.count)
 
     def test_new_count_not_reset_zero(self):
-        pass
+        c1 = Counter()
+        c1.increment()
+        c2 = Counter()
+        self.assertNotEqual(0, c2.count)
